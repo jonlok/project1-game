@@ -1,0 +1,122 @@
+#titleimagebox {
+  margin-left: 100px;
+  margin-top: 20px;
+  border-style: dotted;
+  border-width: 20px 10px 15px 25px;
+  border-color: red green blue yellow;
+  width: 900px;
+  padding: 20px;
+  background: lightblue;
+  -webkit-animation: mymove 5s infinite; /* Chrome, Safari, Opera */
+    animation: mymove 5s infinite;
+}
+
+/*to make the color change from one to another:*/
+/*applying on #titleimagebox*/
+/* Chrome, Safari, Opera */
+@-webkit-keyframes mymove {
+    from {background-color: lightblue;}
+    to {background-color: brown;}
+}
+
+/* Standard syntax */
+@keyframes mymove {
+    from {background-color: lightblue;}
+    to {background-color: brown;}
+}
+
+/*p is "Try to find as many pineapples as you can!"*/
+p {
+font-family: sans-serif;
+font-style: italic;
+font-size: 20px;
+color: #F65314;
+font-variant: small-caps;
+margin-left: 300px;
+}
+h2 {
+
+
+}
+/*h3 is 'Constraints and Winning Conditions'*/
+h3 {
+
+}
+ul {
+  list-style-type: circle;
+  background: #3399ff;
+  padding: 20px;
+  width: 500px;
+}
+
+ul li {
+  background: #cce5ff;
+  margin: 5px;
+}
+/*Grid*/
+.box-1 {
+  background-color: green;
+  height: 100px;
+}
+.box-2 {
+ background-color: yellow;
+ height: 100px;
+}
+.box-3 {
+background-color: lightyellow;
+height: 100px;
+}
+.box-4 {
+background-color: yellow;
+height: 100px;
+}
+.box-5 {
+  background-color: lightgreen;
+  height: 100px;
+}
+.box-6 {
+  background-color: yellow;
+  height: 100px;
+}
+.box-7 {
+  background-color: yellow;
+  height: 100px;
+}
+.box-8 {
+  background-color: yellow;
+  height: 100px;
+}
+.box-9 {
+  background-color: yellow;
+  height: 100px;
+}
+.box-10 {
+  background-color: green;
+  height: 100px;
+}
+
+.table {
+  background-color: brown;
+  width: 800px;
+  height: 20px;
+}
+
+.outputPrompt {
+  border-style: dotted;
+  border-width: 2px;
+  border-color: red;
+  margin-bottom: 10px;
+}
+/*total score image */
+.totalscore {
+  border-style: groove;
+  border-width: 4px;
+  border-color: orange;
+
+}
+.totalscoreimage{
+
+}
+#totalscorevalue{
+  color: red;
+}
