@@ -1,6 +1,7 @@
-#titleimagebox {
+.titleimagebox {
   margin-left: 100px;
   margin-top: 20px;
+  margin-bottom:20px;
   border-style: dotted;
   border-width: 20px 10px 15px 25px;
   border-color: red green blue yellow;
