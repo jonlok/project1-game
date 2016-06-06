@@ -1,12 +1,75 @@
-.titleimagebox {
+/*body {
+  overflow: hidden;
+}*/
+
+/*reset area: label 'Pineapple battleship' + reset button*/
+#reset {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+/*reset button*/
+.btn {
+  height: 50px;
+  color: blue;
+  background-color: orange;
+  font-size: 20px;
+}
+.pineapple {
+  width: 20px;
+  height: 60px;
+  border-style: solid;
+  border-color: black;
+}
+#pineapple1 {
+  width: 30px;
+  height: 60px;
+}
+
+
+.outputPrompt {
+  border-style: dotted;
+  border-width: 2px;
+  border-color: red;
+  margin-bottom: 10px;
+  margin-right: 5px;
+  background-color: lightpink;
+}
+.score-image {
+  width: 400px;
+  border-style: groove;
+  border-width: 4px;
+  border-color: orange;
+  background-color: lightgreen;
+
+}
+/*total score image */
+.score {
+  border-style: groove;
+  border-width: 4px;
+  border-color: orange;
+
+}
+
+.logo {
+  height:50px;
+  width: 50px;
+}
+
+#titleimage {
+  width: 300px;
+  height: 50px;
+}
+
+#titleimagebox {
   margin-left: 100px;
   margin-top: 20px;
   margin-bottom:20px;
   border-style: dotted;
-  border-width: 20px 10px 15px 25px;
+  border-width: 5px 7px 9px 3px;
   border-color: red green blue yellow;
-  width: 900px;
-  padding: 20px;
+  width: 400px;
+  height: 60px;
+  padding-bottom: 10px;
   background: lightblue;
   -webkit-animation: mymove 5s infinite; /* Chrome, Safari, Opera */
     animation: mymove 5s infinite;
@@ -97,49 +160,10 @@ height: 100px;
 }
 
 .table {
-  background-color: brown;
-  width: 800px;
+  background-color: black;
+  width: 1000px;
   height: 20px;
 }
 
-.outputPrompt {
-  border-style: dotted;
-  border-width: 2px;
-  border-color: red;
-  margin-bottom: 10px;
-}
-.score-image {
-  border-style: groove;
-  border-width: 4px;
-  border-color: orange;
 
-}
-/*total score image */
-.score {
-  border-style: groove;
-  border-width: 4px;
-  border-color: orange;
-
-}
-/*reset area: label 'Pineapple battleship' + reset button*/
-#reset {
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-/*reset button*/
-.btn {
-  height: 130px;
-  color: red;
-  background-color: lightpink;
-}
-.pineapple {
-  width: 20px;
-  height: 60px;
-  border-style: solid;
-  border-color: black;
-}
-#pineapple1 {
-  width: 30px;
-  height: 60px;
-}
 
