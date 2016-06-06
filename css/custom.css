@@ -132,4 +132,14 @@ height: 100px;
   color: red;
   background-color: lightpink;
 }
+.pineapple {
+  width: 20px;
+  height: 60px;
+  border-style: solid;
+  border-color: black;
+}
+#pineapple1 {
+  width: 30px;
+  height: 60px;
+}
 
