@@ -30,7 +30,7 @@
 p {
 font-family: sans-serif;
 font-style: italic;
-font-size: 20px;
+font-size: 40px;
 color: #F65314;
 font-variant: small-caps;
 margin-left: 300px;
@@ -108,16 +108,28 @@ height: 100px;
   border-color: red;
   margin-bottom: 10px;
 }
-/*total score image */
-.totalscore {
+.score-image {
   border-style: groove;
   border-width: 4px;
   border-color: orange;
 
 }
-.totalscoreimage{
+/*total score image */
+.score {
+  border-style: groove;
+  border-width: 4px;
+  border-color: orange;
 
 }
-#totalscorevalue{
-  color: red;
+/*reset area: label 'Pineapple battleship' + reset button*/
+#reset {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
+/*reset button*/
+.btn {
+  height: 130px;
+  color: red;
+  background-color: lightpink;
+}
+

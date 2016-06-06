@@ -1,5 +1,7 @@
+<!-- Basic html setup (there is an alternative one in index2.html) -->
 <!DOCTYPE html>
 <html lang='en'>
+
  <head>
   <meta charset = "UTF-8">
   <title>Game: Find the Pineapples</title>
@@ -9,34 +11,18 @@
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script src = "script.js" async></script>
  </head>
+
+
 <body>
-
-
-
 <!-- Instructions: -->
  <div class="col-xs-12">
    <p title="Instructions">Try to find as many pineapples as you can!</p>
   </div>
 
-<!-- output Prompt -->
-  <div class="outputPrompt col-xs-6 col-xs-offset-3">
-<h2>It is Player One's Turn</h2>
-</div>
 
- <!-- label 'Total score:' -->
-  <div class="total-score col-xs-6 col-xs-offset-2">
-    <img src="images/score.png">
-  </div>
-
-  <!-- Total score value display -->
-      <div class="total-score-image col-xs-6 col-xs-offset-2">
-          <h1 id="total-score-value">
-            0
-          </h1>
-      </div>
 
 <!-- pineapple image -->
-<div id="box1"><img src = "pineapple.png" alt="pineapple image"/></div>
+<div id="box1"><img src = "images/pineapple2.png" alt="pineapple image"/></div>
 
 
  <!-- title of the game: Find the Pineapple,
@@ -45,58 +31,79 @@
    <img src = "images/title.png">
  </div>
 
-<section class="container">
+ <!-- output Prompt -->
+  <div class="outputPrompt col-xs-6 col-xs-offset-1">
+<h2>It is Player One's Turn</h2>
+</div>
 
-<!-- Reset button -->
 
-<div class="row">
-<!-- reset button -->
-<button id="reset" type="button" class="btn btn-success col-xs-3 col-xs-offset-1">Reset Game</button>
+ <!-- score image -->
+ <div class='row'>
+  <div class="score-image col-xs-6 col-xs-offset-1">
+    <img src="images/score.png">
+
+  <!-- Total score value display -->
+    <h1 class="score">
+            0
+          </h1>
+
+  </div>
+  </div>
+
+
+
+
+
+<div class="row" id="reset">
 
 <!-- label 'Play Area' -->
- <div class="play-area col-xs-4 col-xs-offset-2">
+ <div class="play-area col-xs-4">
      <h1>
-    The Play Area
+    The 'Pineapple Battleship'
       </h1>
   </div>
 
+<!-- reset button -->
+<button id="reset" type="button" class="btn btn-success col-xs-3 col-xs-offset-1">Reset Game
+</button>
+
 </div>
 
-    </section>
+
 
     <section id="grid" class="container">
       <div class="item row">
 
         <div class="box-1 col-xs-4">
-          box 1
+          room 1
         </div>
 
         <div class="box-2 col-xs-3">
-          box 2
+          room 2
         </div>
 
         <div class="box-3 col-xs-3">
-          box 3
+          room 3
         </div>
 
         <div class="box-4 col-xs-2">
-          box 4
+          room 4
         </div>
 
       </div>
 
       <div class="item row">
         <div class="box-5 col-xs-4">
-          box 5
+          room 5
         </div>
         <div class="box-6 col-xs-3">
-          box 6
+          room 6
         </div>
         <div class="box-7 col-xs-3">
-          box 7
+          room 7
         </div>
         <div class="box-8 col-xs-2">
-          box 8
+          room 8
         </div>
       </div>
 
@@ -110,7 +117,7 @@
          </ul>
        </div>
         <div class="box-9 col-xs-3 col-xs-offset-1">
-          box 9
+          room 9
         </div>
       </div>
 
