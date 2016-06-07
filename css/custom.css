@@ -2,6 +2,15 @@
   overflow: hidden;
 }*/
 
+.display-board {
+background-color: #4C6A92;
+
+}
+
+#grid-area {
+  background-color: #4A0A92;
+}
+
 .play-area {
   color:#92B6D5;
   background-color: cyan;
@@ -9,11 +18,6 @@
 
 #left-display-board {
   background-color: orange;
-}
-
-.display-board {
-background-color: #4C6A92;
-
 }
 
 .constraints {
