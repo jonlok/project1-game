@@ -3,6 +3,19 @@
 }*/
 
 /*reset area: label 'Pineapple battleship' + reset button*/
+.play-area {
+  color:#92B6D5;
+  background-color: cyan;
+}
+
+.display-board {
+background-color: #4C6A92;
+
+}
+.constraints {
+
+}
+
 #reset {
   margin-top: 20px;
   margin-bottom: 20px;
@@ -15,11 +28,15 @@
   font-size: 20px;
 }
 .pineapple {
-  width: 20px;
+  width: 50px;
   height: 60px;
-  border-style: solid;
-  border-color: black;
 }
+
+.logo {
+  height:50px;
+  width: 50px;
+}
+
 #pineapple1 {
   width: 30px;
   height: 60px;
@@ -27,6 +44,7 @@
 
 
 .outputPrompt {
+  margin-left:15px;
   border-style: dotted;
   border-width: 2px;
   border-color: red;
@@ -34,13 +52,19 @@
   margin-right: 5px;
   background-color: lightpink;
 }
-.score-image {
-  width: 400px;
+.right-display-board {
+  width: 700px;
+  height: 220px;
   border-style: groove;
   border-width: 4px;
   border-color: orange;
   background-color: lightgreen;
 
+}
+
+#scoreimage {
+  width: 100px;
+  height: 50px;
 }
 /*total score image */
 .score {
@@ -50,10 +74,6 @@
 
 }
 
-.logo {
-  height:50px;
-  width: 50px;
-}
 
 #titleimage {
   width: 300px;
@@ -102,10 +122,18 @@ h2 {
 
 
 }
-/*h3 is 'Constraints and Winning Conditions'*/
-h3 {
+/*h4 is 'Constraints and Winning Conditions'*/
+h4 {
+  color: red;
 
 }
+/*h5 is the score display*/
+
+h5{
+  color: #FF00CC;
+/*this color is called hot magenta*/
+}
+
 ul {
   list-style-type: circle;
   background: #3399ff;
