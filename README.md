@@ -10,6 +10,6 @@ Basic setup:
 
 -each player has to choose 3 to click on
 
--whoever discovers more pineapples wins
+-whoever discovers 50 pineapples first wins
 
 
