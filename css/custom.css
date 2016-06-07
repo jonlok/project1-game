@@ -2,16 +2,20 @@
   overflow: hidden;
 }*/
 
-/*reset area: label 'Pineapple battleship' + reset button*/
 .play-area {
   color:#92B6D5;
   background-color: cyan;
+}
+
+#left-display-board {
+  background-color: orange;
 }
 
 .display-board {
 background-color: #4C6A92;
 
 }
+
 .constraints {
 
 }
@@ -132,6 +136,7 @@ h4 {
 h5{
   color: #FF00CC;
 /*this color is called hot magenta*/
+ font-size: 23px;
 }
 
 ul {
@@ -146,44 +151,40 @@ ul li {
   margin: 5px;
 }
 /*Grid*/
-.box-1 {
+#room-1 {
   background-color: green;
   height: 100px;
 }
-.box-2 {
+#room-2 {
  background-color: yellow;
  height: 100px;
 }
-.box-3 {
+#room-3 {
 background-color: lightyellow;
 height: 100px;
 }
-.box-4 {
+#room-4 {
 background-color: yellow;
 height: 100px;
 }
-.box-5 {
+#room-5 {
   background-color: lightgreen;
   height: 100px;
 }
-.box-6 {
+#room-6 {
   background-color: yellow;
   height: 100px;
 }
-.box-7 {
+#room-7 {
   background-color: yellow;
   height: 100px;
 }
-.box-8 {
+#room-8 {
   background-color: yellow;
   height: 100px;
 }
-.box-9 {
+#room-9 {
   background-color: yellow;
-  height: 100px;
-}
-.box-10 {
-  background-color: green;
   height: 100px;
 }
 

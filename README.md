@@ -1,6 +1,7 @@
 # project1-game
-WDI project 1: creating a game
-Game - 'Find the Pineapples'
+WDI project 1:
+
+creating a Game - 'Find the Pineapples'
 
 a similar game to Battleship
 
