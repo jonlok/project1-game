@@ -28,15 +28,16 @@ window.onload = start;
 // declaring variables
 var rooms = document.getElementsByClassName("room");
 var turnText = document.querySelector(".outputPrompt");
-var counter = 1;
+var turn = 1;
 var player1Score = [];
 var player2Score = [];
+var player1TotalScore = 0;
+var player2TotalScore = 0;
 
 var winningScore = 50;
 
 // start function
 function start() {
-  musicListener();
   checkRoomListener();
   addResetListener();
 }
@@ -44,39 +45,37 @@ function start() {
 
 // 'clicking on each room' function
 function checkRoomListener () {
-  for (var i = rooms.length - 1; i >= 0; i--) {
-rooms[i].addEventListener("click",checkRoom);
+  for (var i = 0; i < rooms.length; i++) {
+    rooms[i].addEventListener("click",checkRoom);
   }
 }
 
 
 function checkRoom (event) {
- if (event.target.innerHTML.length === 0) {
-   if (counter % 2 === 0) {
-    player2Score.push(numOfPineapples);
-    event.target.innerHTML = 'chosen';
-    event.target.setAttribute('class','player2');
-    turnText.innerHTML = "It is player 2's turn";
-    counter++;
+
+  console.log("p1:" + player1Score);
+  console.log("p2:" + player2Score);
+  console.log("turn:" + turn );
+
+  var $room = $(event.target);
+
+  if (turn % 2 === 0) {
+    player2Score.push(numOfPineapples());
+    $room.addClass('player2');
     // checkForWin(player2Score, 'player2');
 
-   } else {
-    player1Score.push(numOfPineapples);
-    event.target.innerHTML = 'chosen';
-    event.target.setAttribute('class','player1');
-    turnText.innerHTML = "It is player 1's turn";
-    counter++;
+  } else {
+    player1Score.push(numOfPineapples());
+    $room.addClass('player1');
     // checkForWin(player1Score, 'player1');
-
   }
 
- }
-
+  turn++;
 }
 
 // function of randomising the number of pineapples found when clicking on a room
 function numOfPineapples () {
-  return parseInt(Math.random() * 9);
+  return parseInt(Math.random() * 20);
 }
 
 //4) reset button
@@ -87,12 +86,15 @@ function addResetListener(){
 
 function resetBoard(){
   for (var i = rooms.length - 1; i >= 0 ; i--) {
-    rooms[i].innerHTML="";
-    rooms[i].setAttribute("class","clear");
+
+     // rooms[i].innerHTML="";
+    // rooms[i].setAttribute("class","clear");
   }
   counter = 1;
   player1Score = [];
   player2Score = [];
+  player1TotalScore = 0;
+  player2TotalScore = 0;
   turnText.innerHTML = "It is player one's turn";
 }
 
@@ -106,3 +108,10 @@ function musicRandom() {
 //   yellow:
 //   light yellow:
 //   )
+
+
+
+
+$(function() {
+    console.log( "ready!" );
+});
