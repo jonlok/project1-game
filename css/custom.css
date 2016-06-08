@@ -2,6 +2,14 @@
   /*overflow: hidden;*/
 /*}*/
 
+#left-display-board {
+  background-color: blue;
+}
+
+h5 {
+  display: inline;
+}
+
 .outputPrompt {
   width: 500px;
   margin-left: 40px;
@@ -16,6 +24,7 @@
 
 #space-battle {
   height: 100px;
+  display: block;
 }
 #spaceman {
   height: 50px;
@@ -47,6 +56,7 @@ margin-left: 300px;
 #spaceboy-image {
   width: 20px;
   height: 20px;
+
 }
 .button-area {
   background-color: red;
@@ -68,9 +78,7 @@ background-color: #4C6A92;
   font-family:verdana;
 }
 
-#left-display-board {
-  background-color: orange;
-}
+
 
 .constraints {
 
@@ -154,8 +162,9 @@ background-color: #4C6A92;
 /*total score image */
 .score {
   border-style: groove;
-  border-width: 4px;
+  border-width: 6px;
   border-color: orange;
+
 
 }
 
