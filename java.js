@@ -34,10 +34,26 @@ var player2Score = [];
 
 var winningScore = 50;
 
+var musicButton = document.getElementsById("music");
+
+
+
+
+
 // start function
 function start() {
+  musicListener();
   checkRoomListener();
   addResetListener();
+}
+
+// music function
+function musicListener () {
+ musicButton.addEventListener('click', playMusic);
+}
+
+function playMusic () {
+
 }
 
 // 'clicking on each room' function
@@ -56,7 +72,7 @@ function checkRoom (event) {
     event.target.setAttribute('class','player2');
     turnText.innerHTML = "It is player 2's turn";
     counter++;
-    checkForWin(player2Score, 'player2');
+    // checkForWin(player2Score, 'player2');
 
    } else {
     player1Score.push(numOfPineapples);
@@ -64,7 +80,7 @@ function checkRoom (event) {
     event.target.setAttribute('class','player1');
     turnText.innerHTML = "It is player 1's turn";
     counter++;
-    checkForWin(player2Score, 'player1');
+    // checkForWin(player1Score, 'player1');
 
   }
 
@@ -74,7 +90,7 @@ function checkRoom (event) {
 
 // function of randomising the number of pineapples found when clicking on a room
 function numOfPineapples () {
-  return parseInt(Math.random * 9);
+  return parseInt(Math.random() * 9);
 }
 
 //4) reset button
@@ -88,5 +104,19 @@ function resetBoard(){
     rooms[i].innerHTML="";
     rooms[i].setAttribute("class","clear");
   }
+  counter = 1;
+  player1Score = [];
+  player2Score = [];
   turnText.innerHTML = "It is player one's turn";
 }
+
+// set up for randomising a choice of music effects later on
+function musicRandom() {
+  document.getElementById('random').innerHTML = "music effect " + (1 + parseInt(Math.random()* 4));
+}
+// 4 choices of music effects for 4 different rooms
+// (green:
+//   light green:
+//   yellow:
+//   light yellow:
+//   )

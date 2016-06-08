@@ -1,6 +1,9 @@
 /*body {
   overflow: hidden;
 }*/
+.button-area {
+  background-color: red;
+}
 
 .display-board {
 background-color: #4C6A92;
@@ -9,11 +12,13 @@ background-color: #4C6A92;
 
 #grid-area {
   background-color: #4A0A92;
+  (= color)
 }
 
-.play-area {
+.battleship-name-area {
   color:#92B6D5;
   background-color: cyan;
+  font-family:verdana;
 }
 
 #left-display-board {
@@ -24,8 +29,13 @@ background-color: #4C6A92;
 
 }
 
+#music {
+  color: red;
+}
+
 #reset {
-  margin-top: 20px;
+  padding: 5px;
+
   margin-bottom: 20px;
 }
 /*reset button*/
