@@ -1,6 +1,53 @@
-/*body {
-  overflow: hidden;
-}*/
+/*body {*/
+  /*overflow: hidden;*/
+/*}*/
+
+.outputPrompt {
+  width: 500px;
+  margin-left: 40px;
+  border-style: dotted;
+  border-width: 2px;
+  border-color: red;
+  margin-bottom: 10px;
+
+  background-color: lightpink;
+  height: 90px;
+}
+
+#space-battle {
+  height: 100px;
+}
+#spaceman {
+  height: 50px;
+}
+#creature {
+  height: 100px;
+}
+/*p is "Try to find as many pineapples as you can!"*/
+.instructions {
+font-family: sans-serif;
+font-style: italic;
+font-size: 20px;
+color: #F65314;
+font-variant: small-caps;
+margin-left: 300px;
+}
+
+.logo {
+  height:70px;
+  width: 70px;
+}
+
+
+.pineapplelogo {
+  width: 30px;
+  height: 30px;
+  background-color: yellow;
+}
+#spaceboy-image {
+  width: 20px;
+  height: 20px;
+}
 .button-area {
   background-color: red;
 }
@@ -40,57 +87,19 @@ background-color: #4C6A92;
 }
 /*reset button*/
 .btn {
-  height: 50px;
+  height: 30px;
   color: blue;
   background-color: orange;
-  font-size: 20px;
-}
-.pineapple {
-  width: 50px;
-  height: 60px;
+  font-size: 13px;
 }
 
-.logo {
-  height:50px;
-  width: 50px;
-}
-
-#pineapple1 {
-  width: 30px;
-  height: 60px;
+#pineapple-button {
+  width: 20px;
+  height: 20px;
+  background-color: blue;
 }
 
 
-.outputPrompt {
-  margin-left:15px;
-  border-style: dotted;
-  border-width: 2px;
-  border-color: red;
-  margin-bottom: 10px;
-  margin-right: 5px;
-  background-color: lightpink;
-}
-.right-display-board {
-  width: 700px;
-  height: 220px;
-  border-style: groove;
-  border-width: 4px;
-  border-color: orange;
-  background-color: lightgreen;
-
-}
-
-#scoreimage {
-  width: 100px;
-  height: 50px;
-}
-/*total score image */
-.score {
-  border-style: groove;
-  border-width: 4px;
-  border-color: orange;
-
-}
 
 
 #titleimage {
@@ -127,19 +136,29 @@ background-color: #4C6A92;
     to {background-color: brown;}
 }
 
-/*p is "Try to find as many pineapples as you can!"*/
-p {
-font-family: sans-serif;
-font-style: italic;
-font-size: 40px;
-color: #F65314;
-font-variant: small-caps;
-margin-left: 300px;
-}
-h2 {
 
+.right-display-board {
+  width: 700px;
+  height: 220px;
+  border-style: groove;
+  border-width: 4px;
+  border-color: orange;
+  background-color: lightgreen;
 
 }
+
+#scoreimage {
+  width: 100px;
+  height: 50px;
+}
+/*total score image */
+.score {
+  border-style: groove;
+  border-width: 4px;
+  border-color: orange;
+
+}
+
 /*h4 is 'Constraints and Winning Conditions'*/
 h4 {
   color: red;

@@ -34,12 +34,6 @@ var player2Score = [];
 
 var winningScore = 50;
 
-var musicButton = document.getElementsById("music");
-
-
-
-
-
 // start function
 function start() {
   musicListener();
@@ -47,14 +41,6 @@ function start() {
   addResetListener();
 }
 
-// music function
-function musicListener () {
- musicButton.addEventListener('click', playMusic);
-}
-
-function playMusic () {
-
-}
 
 // 'clicking on each room' function
 function checkRoomListener () {
