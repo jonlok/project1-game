@@ -21,6 +21,7 @@ var Room = function(roomNum, element){
   this.element = element;
 };
 
+
 /*
  *  Game object
  */
@@ -47,7 +48,21 @@ var Game = function() {
     });
 
     activePlayer.score += activeRoom[0].numberOfPineapples;
+
+    $(roomTarget).fadeTo(3000, 0.15);
   }
+
+  /*
+   *  Determining who wins
+   */
+
+
+  /*
+   *  Reset Board
+   */
+   function resetBoard(){
+
+   }
 
 
   /*
@@ -58,10 +73,10 @@ var Game = function() {
    4) update Output Prompt
 
    */
-  function updateGUI(){
-   $(this).slideUp(2000).slideDown(2000).fadeTo(3000, 0.15);
+  function updateGUI(e){
+
    $('.outputPrompt').text("It is player two's turn");
-   $('.score').text('new score');
+
   }
 
   /*
@@ -72,8 +87,10 @@ var Game = function() {
     turn++;
     activePlayer = players[turn%2];
 
-    $('#score1').text(players[0].score);
-    $('#score2').text(players[1].score);
+    $('#score1').slideUp(300).slideDown(700).text(players[0].score);
+
+    $('#score2').slideUp(300).slideDown(700).text(players[1].score);
+
   };
 
 
@@ -96,13 +113,23 @@ var Game = function() {
 
         $(element).click(function(e){
           addScore(e);
+          // updateGUI(e);
           that.takeTurn();
         });
+
+
      });
 
-    this.takeTurn();
+        this.takeTurn();
 
+         /*
+         * init Music and sound effects
+         */
+       //  this.buttonOutput = function() {
+       //    $('.room').text = "music effect ";
+       //   }
 
+       // this.buttonOutput();
 
 
 

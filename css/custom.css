@@ -1,17 +1,44 @@
 /*body {*/
   /*overflow: hidden;*/
 /*}*/
-
 #left-display-board {
-  background-color: blue;
+    color:#92B6D5;
+  background-color: lightblue;
+  font-family: verdana;
+  font-style: italic;
+  border-style: dotted;
+  border-width: 5px 7px 9px 3px;
+  border-color: red green blue yellow;
+  background-color: lightblue;
+  -webkit-animation: mymove 5s infinite; /* Chrome, Safari, Opera */
+    animation: mymove 5s infinite;
 }
 
-h5 {
+.battleship-name-area {
+
+}
+/*to make the color change from one to another:*/
+/*applying on .battleship-name-area
+/* Chrome, Safari, Opera */
+@-webkit-keyframes mymove {
+    from {background-color: lightblue;}
+    to {background-color: brown;}
+}
+
+/* Standard syntax */
+@keyframes mymove {
+    from {background-color: lightblue;}
+    to {background-color: brown;}
+}
+
+.logo {
+  height:70px;
+  width: 70px;
   display: inline;
 }
 
 .outputPrompt {
-  width: 500px;
+  width: 300px;
   margin-left: 40px;
   border-style: dotted;
   border-width: 2px;
@@ -22,11 +49,52 @@ font-size: 27px;
   height: 90px;
 }
 
-#space-battle {
-  height: 100px;
-  display: block;
+#score1box {
+  background-color: lightyellow;
+}
+
+#score2box {
+  background-color: lightgreen;
+}
+
+
+.right-display-board {
+  width: 700px;
+  height: 220px;
+  border-style: groove;
+  border-width: 4px;
+  border-color: orange;
+  background-color: lightgreen;
 
 }
+#space-battle {
+  height: 100px;
+  display: inline;
+
+}
+
+h2 {
+  display: inline;
+   color: #FF00CC;
+/*this color is called hot magenta*/
+font-size: 40px;
+}
+
+
+#scoreimage {
+  width: 100px;
+  height: 50px;
+  display: inline;
+}
+/*total score image */
+.score {
+  border-style: groove;
+  border-width: 6px;
+  border-color: orange;
+
+
+}
+
 #spaceman {
   height: 50px;
 }
@@ -44,10 +112,7 @@ margin-left: 300px;
 height: 20px;
 }
 
-.logo {
-  height:70px;
-  width: 70px;
-}
+
 
 
 .pineapplelogo {
@@ -96,11 +161,7 @@ background-color: #4C6A92;
 /* color: a shade of red */
 
 }
-.battleship-name-area {
-  color:#92B6D5;
-  background-color: cyan;
-  font-family:verdana;
-}
+
 
 .constraints {
 
@@ -125,69 +186,26 @@ background-color: #4C6A92;
 
 
 #titleimage {
-  width: 300px;
+  width: 200px;
   height: 50px;
 }
 
 #titleimagebox {
-  border-style: dotted;
-  border-width: 5px 7px 9px 3px;
-  border-color: red green blue yellow;
-  background: lightblue;
-  -webkit-animation: mymove 5s infinite; /* Chrome, Safari, Opera */
-    animation: mymove 5s infinite;
-}
-
-/*to make the color change from one to another:*/
-/*applying on #titleimagebox*/
-/* Chrome, Safari, Opera */
-@-webkit-keyframes mymove {
-    from {background-color: lightblue;}
-    to {background-color: brown;}
-}
-
-/* Standard syntax */
-@keyframes mymove {
-    from {background-color: lightblue;}
-    to {background-color: brown;}
-}
-
-
-.right-display-board {
-  width: 700px;
-  height: 220px;
-  border-style: groove;
-  border-width: 4px;
-  border-color: orange;
-  background-color: lightgreen;
 
 }
 
-#scoreimage {
-  width: 100px;
-  height: 50px;
-}
-/*total score image */
-.score {
-  border-style: groove;
-  border-width: 6px;
-  border-color: orange;
 
 
-}
+
 
 /*h4 is 'Constraints and Winning Conditions'*/
 h4 {
   color: red;
 
 }
-/*h5 is the score display*/
 
-h5{
-  color: #FF00CC;
-/*this color is called hot magenta*/
- font-size: 23px;
-}
+
+
 
 ul {
   list-style-type: circle;
@@ -204,38 +222,47 @@ ul li {
 #room-1 {
   background-color: green;
   height: 100px;
+  border: 3px solid lightgreen;
 }
 #room-2 {
  background-color: yellow;
  height: 100px;
+ border: 3px solid blue;
 }
 #room-3 {
 background-color: lightyellow;
 height: 100px;
+border: 3px solid red;
 }
 #room-4 {
 background-color: yellow;
 height: 100px;
+border: 3px solid lightgreen;
 }
 #room-5 {
   background-color: lightgreen;
   height: 100px;
+  border: 3px solid yellow;
 }
 #room-6 {
   background-color: yellow;
   height: 100px;
+  border: 3px solid green;
 }
 #room-7 {
   background-color: yellow;
   height: 100px;
+  border: 3px solid orange;
 }
 #room-8 {
   background-color: yellow;
   height: 100px;
+  border: 3px solid pink;
 }
 #room-9 {
   background-color: yellow;
   height: 100px;
+  border: 3px solid brown;
 }
 
 .table {
