@@ -25,12 +25,13 @@ font-size: 27px;
 #space-battle {
   height: 100px;
   display: block;
+
 }
 #spaceman {
   height: 50px;
 }
 #creature {
-  height: 100px;
+  height: 80px;
 }
 /*p is "Try to find as many pineapples as you can!"*/
 .instructions {
@@ -79,8 +80,6 @@ background-color: #4C6A92;
   font-family:verdana;
 }
 
-
-
 .constraints {
 
 }
@@ -89,12 +88,6 @@ background-color: #4C6A92;
   color: red;
 }
 
-#reset {
-  padding: 5px;
-
-  margin-bottom: 20px;
-}
-/*reset button*/
 .btn {
   height: 30px;
   color: blue;
@@ -109,23 +102,15 @@ background-color: #4C6A92;
 }
 
 
-
-
 #titleimage {
   width: 300px;
   height: 50px;
 }
 
 #titleimagebox {
-  margin-left: 100px;
-  margin-top: 20px;
-  margin-bottom:20px;
   border-style: dotted;
   border-width: 5px 7px 9px 3px;
   border-color: red green blue yellow;
-  width: 400px;
-  height: 60px;
-  padding-bottom: 10px;
   background: lightblue;
   -webkit-animation: mymove 5s infinite; /* Chrome, Safari, Opera */
     animation: mymove 5s infinite;

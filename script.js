@@ -1,9 +1,9 @@
+
+$(document).ready(function(){
 /*
  *  Game variables
  */
 var maxPineapples = 20;
-
-
 
 
 /*
@@ -21,6 +21,9 @@ var Room = function(roomNum){
   this.roomNumber = roomNum;
   this.numberOfPineapples = Math.ceil( Math.random() * maxPineapples );
 }
+
+
+
 
 /*
  *  Game object
@@ -66,20 +69,46 @@ var Game = function() {
 
     // Create player 2
     players.push( new player() );
+    console.log(players);
 
     // Create rooms
     $('.room').each(function(index, element) {
         var roomNumber = $(element).data('num');
         rooms.push( new Room(roomNumber) );
+     });
+    console.log(rooms)
+
 
         // Add click event
 
-    });
 
-    console.log('init')
-  }
+     var clickOnRoomListener = function(){
+       $('.room').each(function() {
+           $(this).on("click", addScore);
+          });
+      } ;
+
+     clickOnRoomListener();
+
+
+
+
+
+       console.log('init')
+   }
+
+
+
   this.init();
+
+
 }
+
 
 // Create new Game
 var gameboard = new Game();
+
+
+
+
+});
