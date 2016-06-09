@@ -1,0 +1,12 @@
+function updateGUI(){
+
+   $(this).slideUp(2000).slideDown(2000).fadeTo(3000, 0.15);
+   $('.outputPrompt').text("It is player two's turn");
+   $('.score').text('new score');
+   $(".score").animate({left: '50px'});
+
+  }
+
+  $('.room').each(function() {
+          $(this).on('click', updateGUI);
+       });

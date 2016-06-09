@@ -9,10 +9,10 @@ var maxPineapples = 20;
 /*
  *  Player object
  */
-var player = function(){
-  var score = 0;
+var Player = function(){
+  this.score = 0;
   var name = '';
-}
+};
 
 /*
  *  Room object
@@ -20,7 +20,7 @@ var player = function(){
 var Room = function(roomNum){
   this.roomNumber = roomNum;
   this.numberOfPineapples = Math.ceil( Math.random() * maxPineapples );
-}
+};
 
 
 
@@ -39,13 +39,24 @@ var Game = function() {
    *  Adds the score to the player
    */
   function addScore(){
-
+    activePlayer.score = rooms[].numberOfPineapples
   }
 
+
   /*
-   *  Adds the score to the player
+   *  Adds the score to the player and:
+   1) update scoreboard
+   2) i) element room disappears and appears again
+     ii )fade the element room's color opacity to 0.15
+   4) update Output Prompt
+
    */
   function updateGUI(){
+
+   $(this).slideUp(2000).slideDown(2000).fadeTo(3000, 0.15);
+   $('.outputPrompt').text("It is player two's turn");
+   $('.score').text('new score');
+
 
   }
 
@@ -56,7 +67,7 @@ var Game = function() {
   this.takeTurn = function(){
     turn++;
     activePlayer = players[turn%2];
-  }
+  };
 
   /*
    *  Init
@@ -69,14 +80,17 @@ var Game = function() {
 
     // Create player 2
     players.push( new player() );
-    console.log(players);
+
+
 
     // Create rooms
     $('.room').each(function(index, element) {
         var roomNumber = $(element).data('num');
         rooms.push( new Room(roomNumber) );
      });
-    console.log(rooms)
+    console.log(rooms);
+    console.log("room number: " + rooms[0].roomNumber);
+    console.log("number of pineapples: " + rooms[0].numberOfPineapples);
 
 
         // Add click event
@@ -86,6 +100,10 @@ var Game = function() {
        $('.room').each(function() {
            $(this).on("click", addScore);
           });
+       $('.room').each(function() {
+          $(this).on('click', updateGUI);
+       });
+
       } ;
 
      clickOnRoomListener();
@@ -94,19 +112,21 @@ var Game = function() {
 
 
 
-       console.log('init')
-   }
+       console.log('init');
+   };
 
 
 
   this.init();
 
 
-}
+};
 
 
 // Create new Game
 var gameboard = new Game();
+
+
 
 
 

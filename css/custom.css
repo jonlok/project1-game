@@ -61,7 +61,8 @@ height: 20px;
 
 }
 .button-area {
-  background-color: red;
+  background-color: #DEB887;
+  /* color: light-brown*/ ;
 }
 
 .display-board {
@@ -71,9 +72,30 @@ background-color: #4C6A92;
 
 #grid-area {
   background-color: #4A0A92;
-  (= color)
+/* color = purple */
 }
 
+#floor3 {
+  background-color: pink;
+}
+
+#floor2 {
+  background-color: lightblue;
+
+}
+#groundfloor {
+  background-color: #FF7F50;
+/* color: coral */;
+}
+#walkway {
+  background-color:#909090  ;
+/* color: grey */
+}
+#carpet-area {
+  background-color: rgb(184,0,0);
+/* color: a shade of red */
+
+}
 .battleship-name-area {
   color:#92B6D5;
   background-color: cyan;
