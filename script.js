@@ -5,25 +5,21 @@ $(document).ready(function(){
  */
 var maxPineapples = 20;
 
-
 /*
  *  Player object
  */
 var Player = function(){
   this.score = 0;
-  var name = '';
 };
 
 /*
  *  Room object
  */
-var Room = function(roomNum){
+var Room = function(roomNum, element){
   this.roomNumber = roomNum;
   this.numberOfPineapples = Math.ceil( Math.random() * maxPineapples );
+  this.element = element;
 };
-
-
-
 
 /*
  *  Game object
@@ -31,15 +27,26 @@ var Room = function(roomNum){
 var Game = function() {
 
   var players = [];           // Array of players
-  var activePlayer = null;    // The current active player
+  this.activePlayer = null;    // The current active player
   var rooms = [];             // Array of rooms
   var turn = 0;               // The current turn
+  var that = this;
 
   /*
    *  Adds the score to the player
    */
-  function addScore(){
-    activePlayer.score = rooms[].numberOfPineapples
+  function addScore(e){
+
+    var roomTarget = e.target;
+    var roomTargetNum = $(roomTarget).data('num');
+
+    var activeRoom = rooms.filter(function(room){
+        if(room.roomNumber == roomTargetNum){
+          return true;
+        }
+    });
+
+    activePlayer.score += activeRoom[0].numberOfPineapples;
   }
 
 
@@ -52,12 +59,9 @@ var Game = function() {
 
    */
   function updateGUI(){
-
    $(this).slideUp(2000).slideDown(2000).fadeTo(3000, 0.15);
    $('.outputPrompt').text("It is player two's turn");
    $('.score').text('new score');
-
-
   }
 
   /*
@@ -67,7 +71,11 @@ var Game = function() {
   this.takeTurn = function(){
     turn++;
     activePlayer = players[turn%2];
+
+    $('#score1').text(players[0].score);
+    $('#score2').text(players[1].score);
   };
+
 
   /*
    *  Init
@@ -76,59 +84,37 @@ var Game = function() {
   this.init = function(){
 
     // Create player 1
-    players.push( new player() );
+    players.push( new Player() );
 
     // Create player 2
-    players.push( new player() );
+    players.push( new Player() );
 
-
-
-    // Create rooms
+    // Init rooms
     $('.room').each(function(index, element) {
         var roomNumber = $(element).data('num');
-        rooms.push( new Room(roomNumber) );
+        rooms.push( new Room(roomNumber, element) );
+
+        $(element).click(function(e){
+          addScore(e);
+          that.takeTurn();
+        });
      });
-    console.log(rooms);
-    console.log("room number: " + rooms[0].roomNumber);
-    console.log("number of pineapples: " + rooms[0].numberOfPineapples);
 
-
-        // Add click event
-
-
-     var clickOnRoomListener = function(){
-       $('.room').each(function() {
-           $(this).on("click", addScore);
-          });
-       $('.room').each(function() {
-          $(this).on('click', updateGUI);
-       });
-
-      } ;
-
-     clickOnRoomListener();
+    this.takeTurn();
 
 
 
 
 
-       console.log('init');
+    console.log('init');
    };
 
-
-
   this.init();
-
-
 };
 
 
 // Create new Game
 var gameboard = new Game();
-
-
-
-
 
 
 });
