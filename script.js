@@ -1,6 +1,11 @@
 
 $(document).ready(function(){
 /*
+* sounds
+*/
+var mySound = new buzz.sound( "css/sound.wav",
+   { preload: true, loop: false });
+/*
  *  Game variables
  */
 var maxPineapples = 20;
@@ -88,6 +93,7 @@ var Game = function() {
     activePlayer = players[turn%2];
 
     $('#score1').slideUp(300).slideDown(700).text(players[0].score);
+    mySound.play();
 
     $('#score2').slideUp(300).slideDown(700).text(players[1].score);
 
