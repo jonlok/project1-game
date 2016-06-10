@@ -84,6 +84,7 @@ var Game = function() {
         // when turn is 1,3,5 => player 1
         // when turn is 2,4,6 => player 2
         $('#score1').slideUp(300).slideDown(700).text(players[0].score);
+
         $('#score2').slideUp(300).slideDown(700).text(players[1].score);
 
       };
@@ -102,6 +103,7 @@ var Game = function() {
         turn = 0;
         $('#score1').text('0');
         $('#score2').text('0');
+        $('.room').fadeTo(3000, 1);
 
 
         // Create player 1
