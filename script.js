@@ -66,9 +66,7 @@ var Game = function() {
      */
 
 
-
-
-     // function updateGUI(e){
+     // 3) function updateGUI(e){
 
      //  $('.outputPrompt').text("It is player two's turn");
 
@@ -83,6 +81,8 @@ var Game = function() {
         turn++;
         activePlayer = players[turn%2];
         console.log(activePlayer)
+        // when turn is 1,3,5 => player 1
+        // when turn is 2,4,6 => player 2
         $('#score1').slideUp(300).slideDown(700).text(players[0].score);
         $('#score2').slideUp(300).slideDown(700).text(players[1].score);
 
