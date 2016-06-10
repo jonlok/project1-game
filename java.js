@@ -75,7 +75,7 @@ function checkRoom (event) {
 
 // function of randomising the number of pineapples found when clicking on a room
 function numOfPineapples () {
-  return parseInt(Math.random() * 20);
+  return parseInt(Math.random() * 50);
 }
 
 //4) reset button

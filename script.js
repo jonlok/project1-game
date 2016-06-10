@@ -8,7 +8,7 @@ var mySound = new buzz.sound( "css/sound.wav",
 /*
  *  Game variables
  */
-var maxPineapples = 20;
+var maxPineapples = 30;
 
 /*
  *  Player object
