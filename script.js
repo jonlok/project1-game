@@ -32,16 +32,16 @@ var Room = function(roomNum, element){
  */
 var Game = function() {
 
-  var players = [];           // Array of players
-  this.activePlayer = null;    // The current active player
-  var rooms = [];             // Array of rooms
-  var turn = 0;               // The current turn
-  var that = this;
+   var players = [];           // Array of players
+   this.activePlayer = null;    // The current active player
+   var rooms = [];             // Array of rooms
+   var turn = 0;               // The current  turn
+   var that = this;
 
-  /*
-   *  Adds the score to the player
-   */
-  function addScore(e){
+   /*
+    * 1) Adds the score to the player
+    */
+   function addScore(e){
 
     var roomTarget = e.target;
     var roomTargetNum = $(roomTarget).data('num');
@@ -55,95 +55,93 @@ var Game = function() {
     activePlayer.score += activeRoom[0].numberOfPineapples;
 
     $(roomTarget).fadeTo(3000, 0.15);
-  }
-
-  /*
-   *  Determining who wins
-   */
-
-
-  /*
-   *  Reset Board
-   */
-   function resetBoard(){
-
-   }
-
-
-  /*
-   *  Adds the score to the player and:
-   1) update scoreboard
-   2) i) element room disappears and appears again
-     ii )fade the element room's color opacity to 0.15
-   4) update Output Prompt
-
-   */
-  function updateGUI(e){
-
-   $('.outputPrompt').text("It is player two's turn");
-
-  }
-
-  /*
-   *  Take turn
-   *  This function runs by the end of each turn
-   */
-  this.takeTurn = function(){
-    turn++;
-    activePlayer = players[turn%2];
-
-    $('#score1').slideUp(300).slideDown(700).text(players[0].score);
+    console.log('score added');
     mySound.play();
+    console.log('sound');
 
-    $('#score2').slideUp(300).slideDown(700).text(players[1].score);
+    }
 
-  };
+     /*
+     *   2) Determining who wins
+     */
 
 
-  /*
-   *  Init
-   *  This function runs at the beginning of the game
-   */
-  this.init = function(){
 
-    // Create player 1
-    players.push( new Player() );
 
-    // Create player 2
-    players.push( new Player() );
+     // function updateGUI(e){
 
-    // Init rooms
-    $('.room').each(function(index, element) {
-        var roomNumber = $(element).data('num');
-        rooms.push( new Room(roomNumber, element) );
+     //  $('.outputPrompt').text("It is player two's turn");
 
-        $(element).click(function(e){
-          addScore(e);
-          // updateGUI(e);
-          that.takeTurn();
+     //  }
+
+     /*
+      *  4)  Take turn
+      *  This function runs by the end of each  turn
+      */
+
+     this.takeTurn = function(){
+        turn++;
+        activePlayer = players[turn%2];
+        console.log(activePlayer)
+        $('#score1').slideUp(300).slideDown(700).text(players[0].score);
+        $('#score2').slideUp(300).slideDown(700).text(players[1].score);
+
+      };
+
+
+     /*
+      *  5) Init
+      *  This function runs at the beginning of the game
+      */
+      this.init = function(){
+
+        // Clean up
+        players = [];           // Array of players
+        activePlayer = null;    // The current active player
+        rooms = [];             // Array of rooms
+        turn = 0;
+        $('#score1').text('0');
+        $('#score2').text('0');
+
+
+        // Create player 1
+        players.push( new Player() );
+
+        // Create player 2
+        players.push( new Player() );
+
+       // Init rooms
+      $('.room').each(function(index, element) {
+
+         var roomNumber = $(element).data('num');
+         rooms.push( new Room(roomNumber, element) );
+
+          $(element).click(function(e){
+            addScore(e);
+
+             that.takeTurn();
+          });
+
+        });
+
+        $('#reset').click(function(){
+          that.init();
         });
 
 
-     });
+       /*
+       * 6) run the takeTurn function
+       */
 
-        this.takeTurn();
-
-         /*
-         * init Music and sound effects
-         */
-       //  this.buttonOutput = function() {
-       //    $('.room').text = "music effect ";
-       //   }
-
-       // this.buttonOutput();
+       this.takeTurn();
 
 
+       console.log('init');
 
-    console.log('init');
-   };
+     };
 
-  this.init();
-};
+    this.init();
+ };
 
 
 // Create new Game
