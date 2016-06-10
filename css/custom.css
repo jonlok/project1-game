@@ -1,17 +1,23 @@
 /*body {*/
   /*overflow: hidden;*/
 /*}*/
+body {
+  background-color: #d0e4fe;
+  background-image: url('../images/battleship_fight.jpg');
+  background-size: cover;
+}
+
 #left-display-board {
-    color:#92B6D5;
-  background-color: lightblue;
-  font-family: verdana;
-  font-style: italic;
-  border-style: dotted;
-  border-width: 5px 7px 9px 3px;
-  border-color: red green blue yellow;
-  background-color: lightblue;
-  -webkit-animation: mymove 5s infinite; /* Chrome, Safari, Opera */
-    animation: mymove 5s infinite;
+   background-image: url('../images/creature.jpg');
+   width: 650px;
+  height: 270px;
+  border-style: groove;
+  border-width: 4px;
+  border-color: brown;
+  background-color: lightyellow;
+
+  background-size: cover;
+
 }
 
 .battleship-name-area {
@@ -38,8 +44,8 @@
 }
 
 .outputPrompt {
-  width: 300px;
-  margin-left: 40px;
+  width: 400px;
+  margin-left: 50px;
   border-style: dotted;
   border-width: 2px;
   border-color: red;
@@ -47,29 +53,47 @@
 font-size: 27px;
   background-color: lightpink;
   height: 90px;
+  border-radius: 25px;
 }
 
 #score1box {
   background-color: lightyellow;
+  border-radius: 25px;
+  border-style: solid;
+  border-width: 5px;
+  border-color: orange;
 }
 
 #score2box {
   background-color: lightgreen;
+  border-radius: 25px;
+  border-style: solid;
+  border-width: 5px;
+  border-color: green;
 }
 
 
-.right-display-board {
-  width: 700px;
-  height: 220px;
-  border-style: groove;
-  border-width: 4px;
-  border-color: orange;
-  background-color: lightgreen;
+#right-display-board {
+
+     color:#92B6D5;
+  background-color: lightblue;
+  font-family: verdana;
+  font-style: italic;
+  border-style: dotted;
+  border-width: 5px 7px 9px 3px;
+  border-color: red green blue yellow;
+  background-color: lightblue;
+  -webkit-animation: mymove 5s infinite; /* Chrome, Safari, Opera */
+    animation: mymove 5s infinite;
+    border-radius: 25px;
+    display: inline;
+
 
 }
 #space-battle {
   height: 100px;
   display: inline;
+  border-radius: 25px;
 
 }
 
@@ -82,24 +106,32 @@ font-size: 40px;
 
 
 #scoreimage {
-  width: 100px;
-  height: 50px;
+  width: 150px;
+  height: 90px;
   display: inline;
 }
-/*total score image */
-.score {
+
+#score1 {
+  border-style: groove;
+  border-width: 6px;
+  border-color: green;
+
+
+}
+#score2 {
   border-style: groove;
   border-width: 6px;
   border-color: orange;
 
-
 }
 
 #spaceman {
-  height: 50px;
+  height: 90px;
+  border-radius: 5px;
 }
 #creature {
   height: 80px;
+  border-radius: 25px;
 }
 /*p is "Try to find as many pineapples as you can!"*/
 .instructions {
@@ -200,7 +232,7 @@ background-color: #4C6A92;
 
 /*h4 is 'Constraints and Winning Conditions'*/
 h4 {
-  color: red;
+  color: lightyellow;
 
 }
 
@@ -211,7 +243,7 @@ ul {
   list-style-type: circle;
   background: #3399ff;
   padding: 20px;
-  width: 500px;
+  width: 400px;
 }
 
 ul li {
@@ -223,46 +255,55 @@ ul li {
   background-color: green;
   height: 100px;
   border: 3px solid lightgreen;
+  border-radius: 20px;
 }
 #room-2 {
  background-color: yellow;
  height: 100px;
  border: 3px solid blue;
+ border-radius: 20px;
 }
 #room-3 {
 background-color: lightyellow;
 height: 100px;
 border: 3px solid red;
+border-radius: 20px;
 }
 #room-4 {
 background-color: yellow;
 height: 100px;
 border: 3px solid lightgreen;
+border-radius: 20px;
 }
 #room-5 {
   background-color: lightgreen;
   height: 100px;
   border: 3px solid yellow;
+  border-radius: 20px;
 }
 #room-6 {
   background-color: yellow;
   height: 100px;
   border: 3px solid green;
+  border-radius: 20px;
 }
 #room-7 {
   background-color: yellow;
   height: 100px;
   border: 3px solid orange;
+  border-radius: 20px;
 }
 #room-8 {
   background-color: yellow;
   height: 100px;
   border: 3px solid pink;
+  border-radius: 20px;
 }
 #room-9 {
   background-color: yellow;
   height: 100px;
   border: 3px solid brown;
+  border-radius: 20px;
 }
 
 .table {
