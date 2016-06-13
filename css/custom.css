@@ -158,8 +158,14 @@ height: 20px;
 
 }
 .button-area {
-  background-color: #DEB887;
-  /* color: light-brown*/ ;
+
+  background: #DEB887;
+  /* color: light-brown*/ /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(right, #DEB887 , yellow); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(left, #DEB887, yellow); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(left, #DEB887, yellow); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to left, #DEB887, yellow); /* Standard syntax */
+}
 }
 
 .display-board {
@@ -173,7 +179,11 @@ background-color: #4C6A92;
 }
 
 #floor3 {
-  background-color: pink;
+  background: red; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(red, yellow); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(red, yellow); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(red, yellow); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(red, yellow); /* Standard syntax (must be last) */
 }
 
 #floor2 {
