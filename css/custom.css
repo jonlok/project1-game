@@ -1,6 +1,8 @@
 /*body {*/
   /*overflow: hidden;*/
 /*}*/
+
+
 body {
   background-color: #d0e4fe;
   background-image: url('../images/battleship_fight.jpg');
@@ -325,6 +327,10 @@ border-radius: 20px;
   background-color: black;
   width: 1000px;
   height: 20px;
+}
+
+address {
+  color: white;
 }
 
 
