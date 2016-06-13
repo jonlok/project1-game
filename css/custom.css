@@ -128,6 +128,11 @@ font-size: 40px;
 #spaceman {
   height: 90px;
   border-radius: 5px;
+
+}
+p.prompt {
+ text-shadow: 2px 2px 5px red;
+  display: inline;
 }
 #creature {
   height: 80px;
@@ -243,7 +248,7 @@ background-color: #4C6A92;
 /*h4 is 'Constraints and Winning Conditions'*/
 h4 {
   color: lightyellow;
-
+  text-shadow: 2px 2px 4px yellow;
 }
 
 
